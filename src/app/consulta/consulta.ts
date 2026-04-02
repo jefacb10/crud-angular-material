@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: './consulta.html',
   styleUrl: './consulta.scss',
 })
-export class Consulta {
+export class ConsultaComponent {
 
 }
