@@ -1,1 +1,74 @@
-<p>cadastro works!</p>
+<div fxLayout="row" fxLayoutAlign="center center" class="cadastro-container">
+    <div fxLayout="column" fxFlex="1000px">
+        <form class="mt-60" #clientesFrm="ngForm">
+            <mat-card>
+              <mat-card-title>Dados Pessoais</mat-card-title>
+              <mat-card-content class="mt-20">
+                <div fxLayout="row" fxLayoutGap="20px">
+                    <div fxLayout="column" fxFlex="600px">
+                        <mat-form-field fxFlex class="full-width">
+                          <mat-label>Nome</mat-label>
+                          <input matInput name="nome" placeholder="Ex. José da Silva" ngModel required>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxLayout="row" fxLayoutGap="20px">
+                    <div fxLayout="column" fxFlex="500px">
+                        <mat-form-field fxFlex class="full-width">
+                            <mat-label>Email</mat-label>
+                            <input matInput name="email" placeholder="Ex. jose@exemplo.com" ngModel required email>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxLayout="row" fxLayoutGap="20px">
+                    <div fxLayout="column" fxFlex="400px">
+                        <mat-form-field fxFlex class="full-width">
+                          <mat-label>CPF</mat-label>
+                          <input matInput name="cpf" placeholder="Ex. 123.456.789-00" ngModel required>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxLayout="row" fxLayoutGap="20px">
+                    <div fxLayout="column" fxFlex="400px">
+                        <mat-form-field fxFlex class="full-width">
+                          <mat-label>Telefone</mat-label>
+                          <input matInput name="telefone" placeholder="Ex. (11) 98765-4321" ngModel required>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxLayout="row" fxLayoutGap="20px">
+                    <div fxLayout="column" fxFlex="800px">
+                        <mat-form-field fxFlex class="full-width">
+                            <mat-label>Endereço</mat-label>
+                            <input matInput name="endereco" placeholder="Ex. Rua das Flores, 123" ngModel required>
+                        </mat-form-field>
+                    </div>
+                </div>
+              </mat-card-content>
+                <mat-card-actions class="mt-20">
+                    <div fxLayout="row" fxLayoutGap="20px">
+                        <div fxLayout="column" fxFlex="100px">
+                            <button mat-flat-button color="primary" [disabled]="clientesFrm.invalid">
+                                <mat-icon>save</mat-icon>
+                                Salvar
+                            </button>
+                        </div>
+                        <div fxLayout="column" fxFlex="100px">
+                            <button mat-flat-button color="accent" type="reset">
+                                <mat-icon>refresh</mat-icon>
+                                Atualizar
+                            </button>
+                        </div>
+                        <div fxLayout="column" fxFlex="100px" class="ml-5">
+                            <button mat-flat-button color="warn" type="reset">
+                                <mat-icon>backspace</mat-icon>
+                                Limpar
+                            </button>
+                        </div>
+                    </div>
+                </mat-card-actions>
+            </mat-card>
+        </form>
+    </div>
+
+</div>
